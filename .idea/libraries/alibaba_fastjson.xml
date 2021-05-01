@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="alibaba-fastjson">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/alibaba-fastjson.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/dom4j-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/jstl-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-5.1.37.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/poi-3.8-20120326.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/poi-excelant-3.8-20120326.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/poi-ooxml-3.8-20120326.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/poi-ooxml-schemas-3.8-20120326.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/poi-scratchpad-3.8-20120326.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/servlet-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/web/WEB-INF/lib/xmlbeans-2.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

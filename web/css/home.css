@@ -1,0 +1,70 @@
+body{
+    background-image: url(../images/log_bk.png);
+}
+/*导航栏*/
+.operate>div{
+    margin: 0 5px;
+    border-radius: 5px;
+}
+a>div{
+    color: #0f0f0f;
+}
+/*导航结束*/
+/*轮播图*/
+.lb_background{
+    background-image: url(../images/qh_bk.png);
+    background-repeat: repeat-x;
+}
+#myCarousel{
+    /*height: 500px;*/
+    width: 100%;
+}
+.lb-img {
+    width: 94%;
+    margin: 0 auto;
+}
+/*学院介绍*/
+.school_introduction{
+    width: 94%;
+    margin:0 auto;
+    padding: 20px 0;
+}
+.title{
+  color: #3c3c3c;
+    font-weight: bold;
+}
+.school_bottom{
+    border-bottom: 2px solid #2b669a;
+}
+.box{
+    height: auto;
+    padding: 10px 0;
+}
+.carousel-control.left {
+    /* background-image: -webkit-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%); */
+    background-image: -o-linear-gradient(left,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%);
+    /* background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,.0001))); */
+    /* background-image: linear-gradient(to right,rgba(0,0,0,.5) 0,rgba(0,0,0,.0001) 100%); */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+    background-repeat: repeat-x;
+}
+.lu-2{
+    height: 230px;
+}
+.form-group{
+    width: 93%;
+    margin: auto;
+}
+.form-horizontal{
+    padding-top: 20px ;
+}
+.xw>li{
+    border-bottom: 1px dashed gray;
+    background: url(../images/xia.png) no-repeat left 52%;
+    padding-left: 20px;
+}
+.information>div{
+    padding: 5px 0;
+}
+
+
