@@ -22,10 +22,20 @@ import java.util.Random;
 public class Register extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        HttpSession session = req.getSession();
+//        session存在跳转信息修改，不存在跳转注册
+        if (session.getAttribute("sfzh") !=null){
+//            如果session中存在，则请求转发到页面
+            resp.sendRedirect("edit");
+        }else {
+//            否则重定向到index
 
-        List<Major> majorList = new  MajorMapper().selectAll();
-        req.setAttribute("majorList",majorList);
-        req.getRequestDispatcher("/html/student/signUp.jsp").forward(req,resp);
+            List<Major> majorList = new  MajorMapper().selectAll();
+            req.setAttribute("majorList",majorList);
+            req.getRequestDispatcher("/html/student/signUp.jsp").forward(req,resp);
+        }
+
+
     }
 
 

@@ -17,14 +17,14 @@
         <div class="operate" style="display: flex;flex-direction:row">
             <div style="background: white;padding: 5px">
                 <img src="images/head/1.png" height="34" width="17"/>
-                <a href="register">
+                <a href="register" >
                     <img src="images/head/xygk.png" height="23" width="24"/>
                     <div>注册报名</div>
                 </a>
             </div>
             <div style="background: white;padding: 5px">
                 <img src="images/head/2.png" height="34" width="18"/>
-                <a href="#">
+                <a href="pay">
                     <img src="images/head/xygk.png" height="23" width="24"/>
                     <div>网上缴费</div>
                 </a>
@@ -50,7 +50,7 @@
                     <div>录取查询</div>
                 </a>
             </div>
-            <div style="background: white;padding: 5px">
+            <div  style="background: white;padding: 5px">
                 <img src="images/head/6.png" height="34" width="18"/>
                 <a href="application">
                     <img src="images/head/xygk.png" height="23" width="24"/>

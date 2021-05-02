@@ -29,7 +29,7 @@ public class Examinee {
 //    备注
     private String inputName;
 //    添加人
-    private Date inputDate;
+    private String inputDate;
 //    添加时间
     private String updateName;
 //修改人
@@ -140,11 +140,12 @@ public class Examinee {
         this.inputName = inputName;
     }
 
-    public Date getInputDate() {
+
+    public String getInputDate() {
         return inputDate;
     }
 
-    public void setInputDate(Date inputDate) {
+    public void setInputDate(String inputDate) {
         this.inputDate = inputDate;
     }
 

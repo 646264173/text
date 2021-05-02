@@ -22,5 +22,17 @@
         <div style=" padding-left: 10px;">扫描二维码可在手机上登录系统</div>
     </div>
 </div>
+<script>
+
+    // var session = $("#panduan");
+    // if(session == "null"){
+    //
+    //     self.location='register';
+    // }else {
+    //     self.location='edit';
+    //
+    // }
+</script>
+
 </body>
 </html>

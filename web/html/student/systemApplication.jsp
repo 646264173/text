@@ -45,7 +45,7 @@
                         </div>
                         <div class="col-md-2 div_n">
                             <img src="images/systemApplication/payment.png" height="48" width="48"/>
-                            <p><a href="#">网上缴费</a></p>
+                            <p><a href="pay">网上缴费</a></p>
                         </div>
                         <div class="col-md-2 div_n">
                             <img src="images/systemApplication/query.png" height="48" width="48"/>

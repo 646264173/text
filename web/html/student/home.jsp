@@ -232,10 +232,7 @@
 </div>
 
 <script>
-    // var session = $("#session").val();
-    // if(session == "null"){
-    //     alert("登陆查看更多内容");
-    // }
+
 
     function  teacherLogin() {
         $("label[for='sfzh']").text("教工号：");

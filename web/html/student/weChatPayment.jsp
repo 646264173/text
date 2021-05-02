@@ -28,9 +28,28 @@
         <div style="text-align: center">
             <img src="images/qr.png" height="280" width="280"/>
         </div>
-        <button type="button" class="btn btn-info" style="float: right;margin-right: 40px;margin-top: 20px;">点击模拟缴费
+        <button type="button" class="btn btn-info" style="float: right;margin-right: 40px;margin-top: 20px;" onclick="pay()">点击模拟缴费
         </button>
     </div>
 </div>
+
+<script>
+    function pay () {
+        $.ajax({
+            url:'pay',
+            type:'post',
+            dataType:'json',
+            success:function (data) {
+                if (data == true) {
+                    location.href = "paySuccess";
+
+                }else {
+                    location.href = "msg?msg=支付失败或已支付！有问题请联系管理员！<a href='pay'>点击返回支付</a> ";
+                }
+
+            }
+        });
+
+    }
 
 <%@ include file="/html/include/studentFooter.jsp" %>
