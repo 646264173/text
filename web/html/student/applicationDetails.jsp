@@ -45,48 +45,63 @@
             <table>
                 <tr class="tr">
                     <td><span>姓名</span></td>
-                    <td><span>张三</span></td>
+                    <td><span>${regist.name}</span></td>
                     <td><span>性别</span></td>
+                    <c:if test="${regist.sex == 1}">
                     <td><span>男</span></td>
+                    </c:if>
+                    <c:if test="${regist.sex == 2}">
+                        <td><span>女</span></td>
+                    </c:if>
                     <td><span>政治面貌</span></td>
-                    <td><span>团员</span></td>
+
+                    <c:if test="${regist.politicalOutlook == 1}">
+                        <td><span>党员</span></td>
+                    </c:if>
+                    <c:if test="${regist.politicalOutlook == 2}">
+                        <td><span>团员</span></td>
+                    </c:if>
+                    <c:if test="${regist.politicalOutlook == 3}">
+                        <td><span>群众</span></td>
+                    </c:if>
+
                 </tr>
                 <tr class="tr">
                     <td><span>毕业高中</span></td>
-                    <td colspan="2"><input type="text" value="沈阳市第一幼儿园"></td>
+                    <td colspan="2"><input type="text" value="${regist.highSchool}" name="highSchool"></td>
                     <td><span>电子邮箱</span></td>
-                    <td colspan="2"><input type="text" value="23232323@qq.com"></td>
+                    <td colspan="2"><input type="text" value="${regist.emall}" name="emall"></td>
                 </tr>
                 <tr class="tr">
                     <td><span>身份证号</span></td>
-                    <td colspan="2"><span>21111111111111111</span></td>
+                    <td colspan="2"><span>${regist.identityNumber}</span></td>
                     <td><span>考生号</span></td>
-                    <td colspan="2"><span>12121212121212</span></td>
+                    <td colspan="2"><span>${regist.examineeNumber}</span></td>
                 </tr>
                 <tr class="tr">
                     <td><span>通知书邮寄地址</span></td>
-                    <td colspan="5"><input type="text" value="23232323232323" style="width: 80%;"></td>
+                    <td colspan="5"><input type="text" value="${regist.address}" style="width: 80%;" name="address"></td>
                 </tr>
                 <tr class="tr">
                     <td rowspan="3" colspan="2"><span>联系电话</span></td>
                     <td><span>本人联系电话</span></td>
-                    <td colspan="3"><input type="text" value="1388888888"></td>
+                    <td colspan="3"><input type="text" value="${regist.phone}" name="phone"></td>
                 </tr>
                 <tr class="tr">
                     <td><span>家长联系电话</span></td>
-                    <td colspan="3"><input type="text" value="1388888888"></td>
+                    <td colspan="3"><input type="text" value="${regist.parent}" name="parent"></td>
                 </tr>
                 <tr class="tr">
                     <td><span>班主任联系电话</span></td>
-                    <td colspan="3"><input type="text" value="1388888888"></td>
+                    <td colspan="3"><input type="text" value="${regist.headmasterPhone}" name="headmasterPhone"></td>
                 </tr>
                 <tr class="tr">
                     <td colspan="6" style="text-align: center"><span>报考专业</span></td>
                 </tr>
                 <tr class="tr">
-                    <td colspan="2"><span>软件技术</span></td>
-                    <td colspan="2"><span>软件技术</span></td>
-                    <td colspan="2"><span>软件技术</span></td>
+                    <c:forEach var="item" items="${majorList}">
+                    <td colspan="2"><span>${item.majorName}</span></td>
+                    </c:forEach>
                 </tr>
                 <tr class="tr">
                     <td><span>考试科目</span></td>

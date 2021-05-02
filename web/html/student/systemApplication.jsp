@@ -37,7 +37,7 @@
                     <div class="row show-grid">
                         <div class="col-md-2 div_n">
                             <img src="images/systemApplication/information.png" height="48" width="48"/>
-                            <p><a href="#">个人信息</a></p>
+                            <p><a href="edit">个人信息</a></p>
                         </div>
                         <div class="col-md-2 div_n">
                             <img src="images/systemApplication/zm_printing.png" height="48" width="48"/>

@@ -13,14 +13,40 @@ public class MajorMapper {
     private Connection conn;
     private PreparedStatement pstmt;
 
-    public MajorMapper(){
+    public MajorMapper() {
         conn = new conn.Conn().getConn();
     }
 
-    public List<Major> selectAll(){
+    public List<Major> selectAll() {
         List<Major> majorList = new ArrayList<>();
-        try{
+        try {
             pstmt = conn.prepareStatement("select * from major_t where delsign = 0 ");
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                Major major = new Major();
+                major.setMajorId(rs.getInt("major_id"));
+                major.setMajorName(rs.getString("major_name"));
+                major.setRegistNumber(rs.getInt("regist_number"));
+                major.setTuition(rs.getInt("tuition"));
+                major.setRemark(rs.getString("remark"));
+                major.getInputName(rs.getString("input_name"));
+                major.setInputDate(rs.getDate("input_date"));
+                major.setUpdateName(rs.getString("update_name"));
+                major.setUpdateDate(rs.getDate("update_date"));
+                major.setDelsign(rs.getInt("delsign"));
+                majorList.add(major);
+            }
+            return majorList;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+//通过id查专业
+    public Major selectById(int id) {
+        try {
+            pstmt = conn.prepareStatement("select * from major_t where major_id=? and delsign=0");
+            pstmt.setInt(1,id);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()){
                 Major major = new Major();
@@ -29,17 +55,18 @@ public class MajorMapper {
                 major.setRegistNumber(rs.getInt("regist_number"));
                 major.setTuition(rs.getInt("tuition"));
                 major.setRemark(rs.getString("remark"));
-                major.getInputName (rs.getString("input_name"));
+                major.setInputName(rs.getString("input_name"));
                 major.setInputDate(rs.getDate("input_date"));
                 major.setUpdateName(rs.getString("update_name"));
                 major.setUpdateDate(rs.getDate("update_date"));
                 major.setDelsign(rs.getInt("delsign"));
-                majorList.add(major);
+                return major;
             }
-            return majorList;
         }catch (SQLException e){
             e.printStackTrace();
         }
         return  null;
+    }
+
 }
-}
+
