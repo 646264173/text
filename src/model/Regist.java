@@ -5,7 +5,7 @@ import java.util.Date;
 public class Regist {
     private int registId;
 
-    private long examineeNumber;
+    private String examineeNumber;
 
     private String identityNumber;
 
@@ -55,11 +55,11 @@ public class Regist {
         this.registId = registId;
     }
 
-    public long getExamineeNumber() {
+    public String getExamineeNumber() {
         return examineeNumber;
     }
 
-    public void setExamineeNumber(long examineeNumber) {
+    public void setExamineeNumber(String examineeNumber) {
         this.examineeNumber = examineeNumber;
     }
 

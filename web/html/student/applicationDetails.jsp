@@ -41,7 +41,7 @@
 <div style="width:98.5%;margin: 15px auto;border:1px solid #A0A3A5;">
     <div class="bm_div2">
         <p style="text-align: center;font-size: 28px;font-weight: bold"><span>沈阳北软信息职业技术学院单独招生报名登记表</span></p>
-        <form action="#" method="post">
+        <form action="/edit" method="post">
             <table>
                 <tr class="tr">
                     <td><span>姓名</span></td>
@@ -70,7 +70,7 @@
                     <td><span>毕业高中</span></td>
                     <td colspan="2"><input type="text" value="${regist.highSchool}" name="highSchool"></td>
                     <td><span>电子邮箱</span></td>
-                    <td colspan="2"><input type="text" value="${regist.emall}" name="emall"></td>
+                    <td colspan="2"><input type="text" value="${regist.email}" name="email"></td>
                 </tr>
                 <tr class="tr">
                     <td><span>身份证号</span></td>
@@ -89,7 +89,7 @@
                 </tr>
                 <tr class="tr">
                     <td><span>家长联系电话</span></td>
-                    <td colspan="3"><input type="text" value="${regist.parent}" name="parent"></td>
+                    <td colspan="3"><input type="text" value="${regist.parentPhone}" name="parentPhone"></td>
                 </tr>
                 <tr class="tr">
                     <td><span>班主任联系电话</span></td>

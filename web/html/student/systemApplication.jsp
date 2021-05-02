@@ -22,7 +22,7 @@
     }
 </style>
 <body style="background: #F5F5F5">
-<<%@ include file="/html/include/studentHeader.jsp" %>
+<%@ include file="/html/include/studentHeader.jsp" %>
 <!-- 应用系统内容 -->
 <div>
     <!-- 提示文字 -->

@@ -47,7 +47,7 @@
 <!-- 报名登记表内容 -->
 <div style="width:98.5%;margin: 15px auto;border:1px solid #A0A3A5;">
     <div style="width:100%;background-color: #ffffff;">
-        <form action="registertj" method="post">
+        <form action="register" method="post">
             <table style="width:100%">
                 <tr class="tr">
                     <td class="td1"><span>身份证号</span><span class="fuhao">&nbsp;*</span></td>
@@ -200,8 +200,8 @@
         //
         // }
 
-        alert("cg！");
-        $("form[action='registertj']").submit();
+
+        $("form[action='register']").submit();
 
     }
 

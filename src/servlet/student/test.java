@@ -8,9 +8,9 @@ import java.util.List;
 
 public class test {
     public static void main(String[] args) {
-//        List<News> newsList =new NewsMapper().selectNews();
+      List<News> newsList =new NewsMapper().selectNews();
 
-//        System.out.print(newsList.get(2).getContent());
+      System.out.print(newsList.get(2).getContent());
 //        News news =new NewsMapper().selectById(2);
 //        System.out.println(news.getTitle());
 

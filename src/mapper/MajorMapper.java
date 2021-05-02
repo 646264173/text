@@ -45,7 +45,7 @@ public class MajorMapper {
 //通过id查专业
     public Major selectById(int id) {
         try {
-            pstmt = conn.prepareStatement("select * from major_t where major_id=? and delsign=0");
+            pstmt = conn.prepareStatement("select * from major_t where major_id= ? and delsign=0");
             pstmt.setInt(1,id);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()){
@@ -62,6 +62,7 @@ public class MajorMapper {
                 major.setDelsign(rs.getInt("delsign"));
                 return major;
             }
+
         }catch (SQLException e){
             e.printStackTrace();
         }
