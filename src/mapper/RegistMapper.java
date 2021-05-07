@@ -30,9 +30,9 @@ public class RegistMapper {
         return  false;
     }
 
-    public Regist selectByIdNumber(String identityNumber){
+    public Regist selectByIdNumber(String identityNumber ){
         try{
-            pstmt =conn.prepareStatement("select  * from regist_t where identity_number= ? and delsign=0");
+            pstmt = conn.prepareStatement("select  * from regist_t where identity_number=？and delsign=0");
             pstmt.setString(1,identityNumber);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()){
@@ -60,11 +60,12 @@ public class RegistMapper {
                 regist.setUpdateDate(rs.getString("update_date"));
                 regist.setDelsign(rs.getInt("delsign"));
                 return regist;
+
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return  null;
+        return null;
     }
 
 public boolean insert(Regist regist){

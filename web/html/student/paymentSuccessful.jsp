@@ -38,8 +38,8 @@
             您已成功缴费
         </div>
         <div style="padding-left: 85px;margin: 16px 0px;font-size: 12px;">
-            <p>缴费金额：<strong style="color:#a90000">120</strong></p>
-            <p>缴费时间：<strong style="color:#a90000">缴费时间</strong></p>
+            <p>缴费金额：<strong style="color:#a90000">${pay.price}</strong></p>
+            <p>缴费时间：<strong style="color:#a90000">${pay.inputDate}</strong></p>
         </div>
         <div class="div_x">
             <img src="images/systemApplication/safe.png" height="18" width="18"/>

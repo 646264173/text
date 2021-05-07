@@ -3,6 +3,14 @@ package conn;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+
+//        作者：勇帅
+//        博客：blog.ssorg.cn
+//        官网：www.ysup.cn
+//        联系QQ：646264173
+
+
+
 /**
  * 数据库连接类
  */

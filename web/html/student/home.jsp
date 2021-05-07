@@ -1,6 +1,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%--
+  作者：勇帅
+  博客：blog.ssorg.cn
+  官网：www.ysup.cn
+  联系QQ：646264173
+--%>
 <html>
 <head>
     <meta charset="UTF-8">
