@@ -32,7 +32,7 @@ public class RegistMapper {
 
     public Regist selectByIdNumber(String identityNumber ){
         try{
-            pstmt = conn.prepareStatement("select  * from regist_t where identity_number=？and delsign=0");
+            pstmt = conn.prepareStatement("select  *  from regist_t where identity_number = ? and delsign = 0");
             pstmt.setString(1,identityNumber);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()){

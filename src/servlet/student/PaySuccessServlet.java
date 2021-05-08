@@ -25,6 +25,6 @@ public class PaySuccessServlet extends HttpServlet{
             req.getRequestDispatcher("/html/student/paymentSuccessful.jsp").forward(req,resp);
         }else {
             resp.sendRedirect("index");
-        }
+    }
     }
 }

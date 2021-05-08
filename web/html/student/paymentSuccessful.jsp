@@ -24,6 +24,7 @@
 </style>
 <%@ include file="/html/include/studentHeader.jsp" %>
 
+
 <!-- 缴费成功内容 -->
 <div style="width:1200px;margin: 50px auto;min-height: 680px">
     <div style="width:98.5%;margin: 15px auto;border-bottom: 1px solid #cccccc;padding: 5px 0;">
@@ -39,7 +40,8 @@
         </div>
         <div style="padding-left: 85px;margin: 16px 0px;font-size: 12px;">
             <p>缴费金额：<strong style="color:#a90000">${pay.price}</strong></p>
-            <p>缴费时间：<strong style="color:#a90000">${pay.inputDate}</strong></p>
+            <p >缴费时间：<strong style="color:#a90000" id="time"></strong></p>
+            <%--${pay.inputDate}--%>
         </div>
         <div class="div_x">
             <img src="images/systemApplication/safe.png" height="18" width="18"/>
@@ -51,4 +53,14 @@
     </div>
 </div>
 
+<script>
+    var tim = document.getElementById('time');
+    var date = new Date();
+    var year = date.getFullYear();
+    var month = date.getMonth()+1;
+    var day = date.getDate();
+    var str = year + "-" + month + "-" +day;
+    tim.innerHTML = str;
+
+</script>
 <%@ include file="/html/include/studentFooter.jsp" %>

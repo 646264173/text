@@ -40,9 +40,9 @@
             type:'post',
             dataType:'json',
             success:function (data) {
-                if (data == true){
+                if (data == true) {
                     location.href = "paySuccess";
-                }else{
+                } else {
                     location.href = "msg?msg=支付失败或已支付！有问题请联系管理员！<a href='pay'>点击返回支付</a> ";
                 }
             }

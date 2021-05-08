@@ -7,9 +7,9 @@ public class Examinee {
     //准考证号
     private  int registId;
     //报考id
-    private int examRoomId;
+    private String examRoomId;
     //考场id
-    private Date examineeDate;
+    private String examineeDate;
 //    考场日期
     private int seatIocation;
 //    座位号
@@ -35,6 +35,8 @@ public class Examinee {
 //修改人
     private Date updateDate;
 //删除标记
+    private int delsign;
+
 
     public String getExamineeId() {
         return examineeId;
@@ -52,19 +54,19 @@ public class Examinee {
         this.registId = registId;
     }
 
-    public int getExamRoomId() {
+    public String getExamRoomId() {
         return examRoomId;
     }
 
-    public void setExamRoomId(int examRoomId) {
+    public void setExamRoomId(String examRoomId) {
         this.examRoomId = examRoomId;
     }
 
-    public Date getExamineeDate() {
+    public String getExamineeDate() {
         return examineeDate;
     }
 
-    public void setExamineeDate(Date examineeDate) {
+    public void setExamineeDate(String examineeDate) {
         this.examineeDate = examineeDate;
     }
 
@@ -139,7 +141,6 @@ public class Examinee {
     public void setInputName(String inputName) {
         this.inputName = inputName;
     }
-
 
     public String getInputDate() {
         return inputDate;

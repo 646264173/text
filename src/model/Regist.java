@@ -222,4 +222,5 @@ public class Regist {
     public void setDelsign(int delsign) {
         this.delsign = delsign;
     }
+
 }
