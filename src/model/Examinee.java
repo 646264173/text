@@ -7,7 +7,7 @@ public class Examinee {
     //准考证号
     private  int registId;
     //报考id
-    private String examRoomId;
+    private int examRoomId;
     //考场id
     private String examineeDate;
 //    考场日期
@@ -54,12 +54,20 @@ public class Examinee {
         this.registId = registId;
     }
 
-    public String getExamRoomId() {
+    public int getExamRoomId() {
         return examRoomId;
     }
 
-    public void setExamRoomId(String examRoomId) {
+    public void setExamRoomId(int examRoomId) {
         this.examRoomId = examRoomId;
+    }
+
+    public int getDelsign() {
+        return delsign;
+    }
+
+    public void setDelsign(int delsign) {
+        this.delsign = delsign;
     }
 
     public String getExamineeDate() {

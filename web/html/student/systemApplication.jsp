@@ -47,7 +47,7 @@
                         </div>
                         <div class="col-md-2 div_n">
                             <img src="images/systemApplication/zm_printing.png" height="48" width="48"/>
-                            <p><a href="#">打印准考证</a></p>
+                            <p><a href="print">打印准考证</a></p>
                         </div>
                         <div class="col-md-2 div_n">
                             <img src="images/systemApplication/payment.png" height="48" width="48"/>
@@ -55,11 +55,11 @@
                         </div>
                         <div class="col-md-2 div_n">
                             <img src="images/systemApplication/query.png" height="48" width="48"/>
-                            <p><a href="#">成绩查询</a></p>
+                            <p><a href="scoreQuery">成绩查询</a></p>
                         </div>
                         <div class="col-md-2 div_n">
                             <img src="images/systemApplication/admission.png" height="48" width="48"/>
-                            <p><a href="#">录取查询</a></p>
+                            <p><a href="admissionQuery">录取查询</a></p>
                         </div>
                         <div class="col-md-2 div_n">
                             <img src="images/systemApplication/signout.png" height="48" width="48"/>

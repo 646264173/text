@@ -25,8 +25,16 @@ public class PayServlet extends HttpServlet {
 //        用户session检测
         HttpSession session = req.getSession();
         if (session.getAttribute("sfzh") !=null){
+            Pay pay =new Pay();
+            pay.setInputName((String) session.getAttribute("sfzh"));
 //            如果session中存在，则请求转发到页面
-            req.getRequestDispatcher("/html/student/weChatPayment.jsp").forward(req,resp);
+            if (new PayMapper().cxPay(pay)){
+                req.setAttribute("msg","您已支付！无需再次支付！");
+                req.getRequestDispatcher("/html/student/msg.jsp").forward(req,resp);
+            }else {
+                req.getRequestDispatcher("/html/student/weChatPayment.jsp").forward(req,resp);
+            }
+
         }else {
 //            否则重定向到index
             resp.sendRedirect("index");
@@ -57,7 +65,7 @@ public class PayServlet extends HttpServlet {
            String zkzh = "200"+ new DateUtil().getStringDate("ddHHmmss")+(new Random().nextInt(900)+100);
 //             生成准考证号
 //             String zkzh = "207221943802";
-            examinee.setExamRoomId(String.valueOf(zkzh));
+             examinee.setExamineeId(String.valueOf(zkzh));
 //             录取状态设置为未录取
              examinee.setAcceptStatus(1);
              examinee.setInputName(idNumber);

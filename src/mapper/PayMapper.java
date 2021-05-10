@@ -1,6 +1,7 @@
 package mapper;
 
 import model.Pay;
+import model.Regist;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -57,5 +58,22 @@ public class PayMapper {
         }
         return false;
     }
+
+    public  boolean cxPay(Pay regist){
+        try{
+            pstmt =conn.prepareStatement("select  * from pay_t where input_name=? and delsign = 0");
+            pstmt.setString(1,regist.getInputName());
+            ResultSet rs =pstmt.executeQuery();
+            if (rs.next()){
+                return  true;
+
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return  false;
+    }
+
+
 
 }

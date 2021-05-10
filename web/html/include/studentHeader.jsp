@@ -31,21 +31,21 @@
             </div>
             <div style="background: white;padding: 5px">
                 <img src="images/head/3.png" height="34" width="18"/>
-                <a href="#">
+                <a href="print">
                     <img src="images/head/xygk.png" height="23" width="24"/>
                     <div>打印准考证</div>
                 </a>
             </div>
             <div style="background: white;padding: 5px">
                 <img src="images/head/4.png" height="34" width="18"/>
-                <a href="#">
+                <a href="scoreQuery">
                     <img src="images/head/xygk.png" height="23" width="24"/>
                     <div>成绩查询</div>
                 </a>
             </div>
             <div style="background: white;padding: 5px">
                 <img src="images/head/5.png" height="34" width="18"/>
-                <a href="#">
+                <a href="admissionQuery">
                     <img src="images/head/xygk.png" height="23" width="24"/>
                     <div>录取查询</div>
                 </a>

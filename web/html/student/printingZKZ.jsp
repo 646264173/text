@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -47,7 +48,7 @@
     </div>
     <div class="div2">
         <p>
-            <button class="btn btn-success">打印</button>
+            <button class="btn btn-success" onclick="printZkz()">打印</button>
             在浏览器打印功能设置:去除<span>页眉,页脚</span>以及把<span>背景图形</span>(或<span>背景颜色和图片</span>)选项<span>选中</span></p>
     </div>
     <div class="div3" style="border: 2px solid #000000">
@@ -59,19 +60,19 @@
             <table>
                 <tr>
                     <td style="width: 100px;">考生姓名：</td>
-                    <td>张三</td>
+                    <td>${regist.name}/td>
                 </tr>
                 <tr>
                     <td style="width: 100px;">准考证号：</td>
-                    <td>211111111111111111</td>
+                    <td>${examinee.examineeId}</td>
                 </tr>
                 <tr>
                     <td style="width: 100px;">身份证号：</td>
-                    <td>211111111111111111</td>
+                    <td>${regist.identityNumber}</td>
                 </tr>
                 <tr>
                     <td style="width: 100px;">考生学校：</td>
-                    <td>沈阳市第一幼儿园</td>
+                    <td>${regist.highSchool}</td>
                 </tr>
                 <tr>
                     <td style="width: 100px;">考试地点：</td>
@@ -79,7 +80,7 @@
                 </tr>
                 <tr>
                     <td style="width: 100px;">报考专业：</td>
-                    <td>软件技术</td>
+                    <td>${major.majorName}</td>
                 </tr>
             </table>
         </div>
@@ -96,27 +97,27 @@
                 </tr>
                 <tr>
                     <td>语文</td>
-                    <td>2019年3月12日</td>
+                    <td>${examinee.examineeData}</td>
                     <td>8:30-10:00</td>
-                    <td>1212121212</td>
-                    <td>11</td>
-                    <td>教学楼1101</td>
+                    <td>${examRoom.examRoomId}</td>
+                    <td>${examinee.seatLocation}</td>
+                    <td>${examRoom.examRoomAddress}</td>
                 </tr>
                 <tr>
                     <td>数学</td>
-                    <td>2019年3月12日</td>
+                    <td>${examinee.examineeData}</td>
                     <td>10:20-11:50</td>
-                    <td>1212121212</td>
-                    <td>11</td>
-                    <td>教学楼1101</td>
+                    <td>${examRoom.examRoomId}</td>
+                    <td>${examinee.seatLocation}</td>
+                    <td>${examRoom.examRoomAddress}</td>
                 </tr>
                 <tr>
                     <td>英语</td>
-                    <td>2019年3月12日</td>
+                    <td>${examinee.examineeData}</td>
                     <td>13:30-15:30</td>
-                    <td>1212121212</td>
-                    <td>11</td>
-                    <td>教学楼1101</td>
+                    <td>${examRoom.examRoomId}</td>
+                    <td>${examinee.seatLocation}</td>
+                    <td>${examRoom.examRoomAddress}</td>
                 </tr>
             </table>
         </div>
@@ -138,5 +139,14 @@
         </div>
     </div>
 </div>
+<script>
+    function printZkz() {
+        var printHtml = $(".div3").html;
+        var bodyHtml = $("body").html;
+        $("body").html(printHtml);
+        window.print();
+        $("body").html(bodyHtml);
+    }
+</script>
 </body>
 </html>

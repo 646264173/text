@@ -61,12 +61,12 @@
             <img src="images/school_logo.png" height="63" width="64"/>
         </div>
         <div class="div_1">
-            <p>准考证号：21111111111111</p>
-            <p>身份证号：21111111111111</p>
-            <p>姓名：张三</p>
-            <p>第一志愿：软件技术</p>
-            <p>第二志愿：软件技术</p>
-            <p>第三志愿：软件技术</p>
+            <p>准考证号：${examinee.examineeId}</p>
+            <p>身份证号：${regist.identityNumber}</p>
+            <p>姓名：${regist.name}</p>
+            <c:forEach var="item" items="${majorList}" varStatus="status">
+                <p>第${status.index+1}志愿：${item.majorName}</p>
+            </c:forEach>
         </div>
         <hr/>
         <div class="div_1"><p>总成绩：111</p></div>
